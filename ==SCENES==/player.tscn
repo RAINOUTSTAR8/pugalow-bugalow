@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b33yrp58cjt1d"]
+
+[ext_resource type="Script" uid="uid://bnamu02d080rx" path="res://==SCRIPTS==/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dcvon6t4qgru3" path="res://==ASSETS==/MAIN CHARACTER/bugalow-front.png" id="2_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_i3pqv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_onrkg")
+hframes = 4
+vframes = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_top = 0
